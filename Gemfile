@@ -82,4 +82,5 @@ end
 
 gem 'cancancan', '~> 3.4'
 gem 'devise'
+gem 'paperclip'
 
