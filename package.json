@@ -1,8 +1,7 @@
 {
 
   "dependencies": {
-    "flowbite": "^1.5.1"
-  "devDependencies": {
+    "flowbite": "^1.5.1",
     "install": "^0.13.0",
     "npm": "^8.16.0",
     "stylelint": "^13.13.1",
