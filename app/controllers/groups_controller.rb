@@ -31,7 +31,7 @@ class GroupsController < ApplicationController
     @author = current_user
     @group = Group.new(name: @name, author_id: @author.id)
     @group.icon.attach(params[:group][:icon])
-    
+
     if @group.save
       redirect_to @group, success: 'Category was successfully created.'
     else
@@ -63,10 +63,9 @@ class GroupsController < ApplicationController
   #   end
   # end
 
-  private 
+  private
 
   def group_params
-    params.require(:group).permit(:name, :user_id,:icon)
+    params.require(:group).permit(:name, :user_id, :icon)
   end
-
 end
