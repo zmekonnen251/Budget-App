@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     resources :entities
   end
 
-  root groups_path
+  root "groups#index"
 end

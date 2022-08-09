@@ -10,7 +10,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'ffi', github: 'ffi/ffi', submodules: true
 
-gem 'bootstrap', '~> 5.1.3'
+# gem 'bootstrap', '~> 5.1.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -81,3 +81,5 @@ end
 
 gem 'cancancan', '~> 3.4'
 gem 'devise'
+gem 'paperclip'
+gem 'tailwindcss-rails', '~> 2.0'

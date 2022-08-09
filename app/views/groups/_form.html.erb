@@ -1,0 +1,7 @@
+<%= form_for @group ,url:groups_path do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :icon%>
+  <%= f.file_field :icon%>
+  <%= f.submit %>
+<% end %>
