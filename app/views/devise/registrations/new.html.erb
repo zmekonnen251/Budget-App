@@ -9,40 +9,40 @@
         />
       </div>
       <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-        <%= form_for(resource, as: resource_name,url: session_path(resource_name)) do |f| %>
+        <%= form_for(resource, as: resource_name,url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
          
           <!-- Email input -->
           <div class="mb-6">
-            <%= f.text_field :name , autofocus: true, autocomplete: "name",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none",placeholder: "Enter your name"%>
+            <%= f.text_field :name , autofocus: true, autocomplete: "name",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#fff] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#fff] focus:border-blue-600 focus:outline-none",placeholder: "Enter your name"%>
           </div>
 
           <div class="mb-6">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none",placeholder: "Enter your email"%>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#fff] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#fff] focus:border-blue-600 focus:outline-none",placeholder: "Enter your email"%>
           </div>
 
           <!-- Password input -->
           <div class="mb-6">
-          <%= f.password_field :password, autocomplete: "current-password",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none",placeholder: "Enter your password" %>
+          <%= f.password_field :password, autocomplete: "current-password",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#fff] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#fff] focus:border-blue-600 focus:outline-none",placeholder: "Enter your password" %>
           
           </div>
 
           <div class="mb-6">
-          <%= f.password_field :password_confirmation, autocomplete: "current-password",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none",placeholder: "Enter your password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "current-password",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#fff] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#fff] focus:border-blue-600 focus:outline-none",placeholder: "Enter your password" %>
           
           </div>
           <% if devise_mapping.rememberable? %>
             <div class="flex justify-start items-center mb-6">
           
               <div class="form-group form-check">
-                <%= f.check_box :remember_me,class: "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" %>
+                <%= f.check_box :remember_me,class: "form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-[#fff] checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" %>
                 <%= f.label :remember_me ,class: "form-check-label inline-block text-gray-800"%>
             </div>
             </div>
           <% end %>
           <!-- Submit button -->
           <div class="flex justify-center items-center">
-            <%= f.submit "Sign Up",class: "w-full flex justify-center bg-primary text-white p-4  rounded-full tracking-wide
+            <%= f.submit "Sign Up",class: "w-full flex justify-center bg-primary text-[#fff] p-4  rounded-full tracking-wide
                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"%>
             
           </div>
@@ -54,7 +54,7 @@
           </div>
 
           <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+            class="px-7 py-3 text-[#fff] font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
             style="background-color: #3b5998"
             href="#!"
             role="button"
@@ -74,7 +74,7 @@
               /></svg>Continue with Facebook
           </a>
           <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
+            class="px-7 py-3 text-[#fff] font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
             style="background-color: #55acee"
             href="#!"
             role="button"

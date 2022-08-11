@@ -1,18 +1,18 @@
 <div class="flex flex-col space-y-3">
 
 <% if can? :manage, @group%>
-  <div class="flex flex-row justify-between items-center px-4 py-2 mb-2 text-text-primary bg-white">
+  <div class="flex flex-row justify-between items-center px-4 py-2 mb-2 text-text-primary bg-[#fff]">
       <img src="<%= (url_for(@group.icon))%>" class="h-[2.5rem]"/>
       <p class="text-text-primary text-lg"><%= @group.name %></p>
       <p class="text-black font-bold">$<%= @group.entities.sum(:amount)%></p>
   </div>
 
-  <%= link_to 'New Transaction', new_group_entity_path(@group),class: " hidden sm:block self-center md:bottom-6 w-25 text-center bg-secondary hover:bg-primary hover:opacity-50 text-white font-bold py-3 px-4 border border-primary rounded" %>
+  <%= link_to 'New Transaction', new_group_entity_path(@group),class: " hidden sm:block self-center md:bottom-6 w-25 text-center bg-secondary hover:bg-primary hover:opacity-50 text-[#fff] font-bold py-3 px-4 border border-primary rounded" %>
 
 
   <div class="flex flex-col space-y-2">
     <% @group.entities.each do |entity| %>
-    <div class='bg-white px-4 py-3 m-3 text-text-primary'>
+    <div class='bg-[#fff] px-4 py-3 m-3 text-text-primary'>
       <div class="flex flex-row justify-between items-center">
         <p><%= entity.name %></p>
         <p class="font-bold text-black">$<%= entity.amount %></p>
@@ -30,4 +30,4 @@
 
 </div>
 
-<%= link_to 'New Transaction', new_group_entity_path(@group),class: "z-30 fixed sm:hidden bottom-0 md:bottom-6 w-full text-center bg-secondary hover:bg-primary hover:opacity-50 text-white font-bold py-3 px-4 border border-primary rounded" %>
+<%= link_to 'New Transaction', new_group_entity_path(@group),class: "z-30 fixed sm:hidden bottom-0 md:bottom-6 w-full text-center bg-secondary hover:bg-primary hover:opacity-50 text-[#fff] font-bold py-3 px-4 border border-primary rounded" %>
