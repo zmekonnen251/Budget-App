@@ -95,7 +95,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'https://frozen-forest-32219.herokuapp.com/',
+      domain:               'gmail.com',
       user_name:            Rails.application.credentials.dig(:gmail, :user_name),
       password:             Rails.application.credentials.dig(:gmail, :password),
       authentication:      'plain',
@@ -103,6 +103,5 @@ Rails.application.configure do
       # tsl: :true,
       enable_starttls_auto: true  
     }
-    
 end
 
