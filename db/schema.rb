@@ -55,7 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_145223) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "entity_id"
@@ -70,6 +69,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_145223) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
