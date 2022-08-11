@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <title>BudgetApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,9 +11,23 @@
     
   </head>
 
-  <body>
-    <%= render 'layouts/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+  <body data-controller="hamburger" class="min-h-screen bg-text-primary bg-opacity-[0.2]">
+ 
+  <%= render 'layouts/navbar' %>
+    
+    <div class="sm:h-auto overflow-hidden sm:overflow-auto" data-action="click->hamburger#closeMenu">
+      <% if user_signed_in?%>
+        <div class="mt-14 text-center">
+          <%= render 'shared/flashes' %>
+        </div>
+      <%else%>
+        <div class="text-center">
+          <%= render 'shared/flashes' %>
+        </div>
+      <%end%>
+       
+      
+      <%= yield %>
+    </div>
   </body>
 </html>
