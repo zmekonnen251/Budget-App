@@ -10,7 +10,7 @@
 
 ## Video Explanation
 
-[Loom vieo]()
+[Loom video](https://www.loom.com/share/c6c365e8e18442f2b78a5dd890ecfdf0)
 
 ## Built With
 
