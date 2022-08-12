@@ -1,0 +1,12 @@
+<div class="relative h-[100vh] pt-[7rem] overflow-hidden">
+  <h1 class="text-text-primary text-center  text-[2.5rem]">Budget App</h1>
+  <h1 class="text-text-primary text-center text-[1.5rem]">Welcome to your budget App</h1>
+  <p class="text-text-primary text-center"><%= Time.now.asctime%><p>
+  <div class="absolute bottom-0 w-full flex flex-col gap-y-2 sm:hidden">
+    <%=link_to 'Login',user_session_path,class: "w-full flex justify-center bg-secondary text-[#fff] p-4  tracking-wide
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300" %>
+
+    <%=link_to 'Sign up',new_user_registration_path,class: "w-full flex justify-center bg-secondary text-[#fff] p-4  tracking-wide
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"%>
+  </div>
+<div>

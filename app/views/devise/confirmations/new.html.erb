@@ -1,0 +1,27 @@
+<section class="flex flex-col mx-auto mt-[4rem] items-center">
+    <h2 class="text-text-primary text-lg font-bold mb-3">Resend confirmation instructions</h2>
+    
+    <div class="flex flex-row justify-center items-center">
+      <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+
+          <div class="mb-6">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-[#fff] bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-[#fff] focus:border-blue-600 focus:outline-none",placeholder: "Enter your email"%>
+          </div>
+
+
+
+
+          <div class="flex justify-center items-center">
+                <%= f.submit "Resend confirmation instructions",class: "w-full flex justify-center bg-secondary text-[#fff] p-4  rounded-lg tracking-wide
+                              font-semibold  focus:outline-none focus:shadow-outline hover:bg-primary shadow-lg cursor-pointer transition ease-in duration-300"%>
+                  
+          </div>
+      <% end %>
+    </div>
+
+    <div class="flex flex-row space-x-1 text-text-primary mt-3">
+      <%= render "devise/shared/links" %>
+    </div>
+</section>

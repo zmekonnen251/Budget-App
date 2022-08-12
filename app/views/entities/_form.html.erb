@@ -1,0 +1,17 @@
+<%= form_for @entity ,url:group_entities_path(params[:group_id]) do |f| %>
+<div class="space-y-2 mx-9 flex flex-col bg-[#fff] px-11 py-6 rounded-lg">
+  <div class="mt-8 content-center flex flex-col space-y-2">
+    <%= f.label :name ,class:"text-primary"%>
+    <%= f.text_field :name,class:"text-primary w-[75%]" %>
+  </div>
+
+  <div class="mt-8 content-center flex flex-col space-y-2">
+    <%= f.label :amount,class:"text-primary"%>
+    <%= f.number_field :amount,class:"text-primary p-2 w-[50%]"%>
+  </div>
+
+     <%= f.submit "Add transaction", class: " w-fit flex bg-secondary text-[#fff] p-2 tracking-wide uppercase
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300"%>
+
+</div>
+<% end %>

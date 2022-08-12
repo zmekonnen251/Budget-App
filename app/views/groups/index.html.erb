@@ -1,0 +1,30 @@
+<div class="relative flex flex-col gap-2 mt-3 overflow-y-scroll">
+ <%= link_to 'New Category', new_group_path,class: " hidden sm:block md:mt-3 self-center md:bottom-6 w-25 text-center bg-secondary hover:bg-primary hover:opacity-50 text-[#fff] font-bold py-3 px-4 border border-primary rounded" %>
+  <% @groups.each do |group| %>
+  <%if can? :manage,group%>
+    <%= link_to group_path(id:group.id),method: 'get' do%>
+      <div class="justify-between flex flex-row  items-start pl-4 p-3 mx-3 bg-[#fff] mt-2">
+          <img src="<%= (url_for(group.icon))%>" class="h-[2.5rem]"/>
+        
+          <div class="flex flex-col space-y-2 ">
+            <p><%= group.name %></p>
+            <p><%= group.created_at.asctime%></p>  
+          </div>
+          <p class="flex flex-row justify-end w-[70px] font-bold text-black">$<%= group.entities.sum(:amount)%></p> 
+      </div>
+
+     <%end%>
+  <%end%>
+ <%end%>
+
+  <% if @groups.empty? %>
+    <p class='text-center text-text-primary text-md'>No categories yet</p>
+  <% end %>
+  
+
+  
+
+</div>
+<%= link_to 'New Category', new_group_path,class: "z-30 fixed sm:hidden bottom-0 md:bottom-6 w-full text-center bg-secondary hover:bg-primary hover:opacity-50 text-[#fff] font-bold py-3 px-4 border border-primary rounded" %>
+
+
