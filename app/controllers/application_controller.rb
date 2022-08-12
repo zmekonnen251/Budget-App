@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :update_allowed_params, if: :devise_controller?
 
+  etag { Rails.application.importmap.digest(resolver: helpers) if request.format&.html? }
+
   
 
   protected
