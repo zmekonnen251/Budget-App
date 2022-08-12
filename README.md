@@ -6,7 +6,7 @@
 
 ## Live demo
 
-[Live demo](https://vast-depths-87802.herokuapp.com/)
+[Live demo](https://zmekonnen-my-rails-budget-app.herokuapp.com/)
 
 ## Video Explanation
 
