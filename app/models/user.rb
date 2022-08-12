@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :groups, foreign_key: 'author_id'
   has_many :entities, foreign_key: 'author_id'
   devise :database_authenticatable, :registerable,
-         :rememberable, :validatable, :recoverable, :confirmable
+         :rememberable, :validatable
 
   validates :name, presence: true
 

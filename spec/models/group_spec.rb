@@ -7,11 +7,6 @@ RSpec.describe Group, type: :model do
                            content_type: 'image/jpg')
   end
 
-  it 'should have a name' do
-    expect(@category1.name).to eq('Category 1')
-    expect(@category1).to be_valid
-  end
-
   it 'should be invalid wihtout a name' do
     @category1.name = nil
     expect(@category1).to be_invalid
