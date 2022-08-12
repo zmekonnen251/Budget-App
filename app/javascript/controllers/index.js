@@ -6,6 +6,3 @@ import { application } from "./application"
 
 import HamburgerController from "./hamburger_controller"
 application.register("hamburger", HamburgerController)
-
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
