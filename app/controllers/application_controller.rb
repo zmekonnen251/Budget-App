@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :update_allowed_params, if: :devise_controller?
 
   add_flash_types :success, :info, :warning, :danger, :alert, :error, :notice
-  
+
   protected
 
   def update_allowed_params
