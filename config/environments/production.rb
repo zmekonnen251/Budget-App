@@ -102,12 +102,16 @@ Rails.application.configure do
       # ssl: :true,
       # tsl: :true,
       enable_starttls_auto: true  
-    }
+  }
     
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.default :charset => "utf-8"
     config.action_mailer.default_url_options = { :host => "zmekonnen-my-rails-budget-app.herokuapp.com",protocol: 'https' }
     config.hosts << "zmekonnen-my-rails-budget-app.herokuapp.com"
-  end
+
+
+    config.log_level = :warn
+    config.assets.initialize_on_precompile = false
+end
 
